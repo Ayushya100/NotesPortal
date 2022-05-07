@@ -31,8 +31,20 @@ Run MongoDB
 Packages Required to be installed
 ---------------------------------
 1. Run the following command in cmd:
+    npm i express
     npm i Mongoose
     npm i validator
     npm i nodemon
     npm i cors
     npm i body-parser
+
+
+
+Install node dependencies before Running
+----------------------------------------
+node install
+
+
+Running the serverSide application
+----------------------------------
+npm run dev
