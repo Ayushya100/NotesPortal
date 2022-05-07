@@ -16,6 +16,11 @@ require("../db/conn");
 const port = process.env.port || 3000;
 const api = '/api/v1/notes'
 
+// Routes
+const getAllNotes = require('../routes/getAllNotes');
+
+app.use(`${api}/getAllNotes`, getAllNotes);
+
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
 })
