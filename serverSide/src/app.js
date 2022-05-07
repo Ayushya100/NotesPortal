@@ -19,9 +19,11 @@ const api = '/api/v1/notes'
 // Routes
 const getAllNotes = require('../routes/getAllNotes');
 const getNoteById = require('../routes/getNotesById');
+const createNotes = require('../routes/createNotes');
 
 app.use(`${api}/getAllNotes`, getAllNotes);
 app.use(`${api}/getNoteById`, getNoteById);
+app.use(`${api}`, createNotes);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
