@@ -1,10 +1,10 @@
-const express = require("express");
-const app = express();
+const express = require('express');
+const router = express.Router();
 
 // Adding Models
-const Notes = require("../models/notes");
+const Notes = require('../models/notes');
 
-app.post('/', async(req, res) => {
+router.post('/', async(req, res) => {
     try {
         const note = new Notes(req.body);
         const createNote = await note.save();
@@ -14,4 +14,4 @@ app.post('/', async(req, res) => {
     }
 });
 
-module.exports = app;
+module.exports = router;

@@ -1,9 +1,9 @@
-const express = require("express");
-const app = express();
+const express = require('express');
+const router = express.Router();
 
-const Notes = require("../models/notes");
+const Notes = require('../models/notes');
 
-app.get('/', async(req, res) => {
+router.get('/', async(req, res) => {
     try {
         const allNotes = await Notes.find();
         res.send(allNotes);
@@ -12,4 +12,4 @@ app.get('/', async(req, res) => {
     }
 });
 
-module.exports = app;
+module.exports = router;

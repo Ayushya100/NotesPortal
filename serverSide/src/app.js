@@ -1,7 +1,7 @@
-const express = require("express");
-const bodyparser = require("body-parser");
-const cors = require("cors");
-const path = require("path");
+const express = require('express');
+const bodyparser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyparser.json());
 
 // Adding required connections and Models
-require("../db/conn");
+require('../db/conn');
 
 // Port No and API
 const port = process.env.port || 3000;
@@ -32,3 +32,5 @@ app.use(`${api}/deleteNotes`, deleteNotes);
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
 });
+
+module.exports = app;

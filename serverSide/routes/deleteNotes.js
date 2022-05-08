@@ -1,9 +1,9 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 
 const Notes = require("../models/notes");
 
-app.delete("/:id", async(req, res) => {
+router.delete("/:id", async(req, res) => {
     try {
         const deleteNote = await Notes.findByIdAndDelete(req.params.id);
         if (!req.params.id) {
@@ -15,4 +15,4 @@ app.delete("/:id", async(req, res) => {
     }
 });
 
-module.exports = app;
+module.exports = router;
