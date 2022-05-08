@@ -42,7 +42,7 @@ Packages Required to be installed
 
 Install node dependencies before Running
 ----------------------------------------
-node install
+npm install
 
 
 Running the serverSide application
