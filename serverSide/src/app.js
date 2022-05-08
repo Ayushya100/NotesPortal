@@ -21,11 +21,13 @@ const getAllNotes = require('../routes/getAllNotes');
 const getNoteById = require('../routes/getNotesById');
 const createNotes = require('../routes/createNotes');
 const updateNotes = require('../routes/updateNotes');
+const deleteNotes = require('../routes/deleteNotes');
 
 app.use(`${api}/getAllNotes`, getAllNotes);
 app.use(`${api}/getNoteById`, getNoteById);
 app.use(`${api}`, createNotes);
 app.use(`${api}/updateNotes`, updateNotes);
+app.use(`${api}/deleteNotes`, deleteNotes);
 
 app.listen(port, () => {
     console.log(`Connection has started at port: ${port}`);
