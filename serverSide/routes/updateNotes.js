@@ -1,9 +1,9 @@
 const express = require("express");
-const app = express();
+const router = express.Router();
 
 const Notes = require("../models/notes");
 
-app.put("/:id", async(req, res) => {
+router.put("/:id", async(req, res) => {
     try {
         const _id = req.params.id;
         await Notes.findByIdAndUpdate(_id, req.body);
@@ -14,4 +14,4 @@ app.put("/:id", async(req, res) => {
     }
 });
 
-module.exports = app;
+module.exports = router;

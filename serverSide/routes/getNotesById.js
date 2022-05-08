@@ -1,9 +1,9 @@
-const express = require("express");
-const app = express();
+const express = require('express');
+const router = express.Router();
 
-const Notes = require("../models/notes");
+const Notes = require('../models/notes');
 
-app.get('/:id', async(req, res) => {
+router.get('/:id', async(req, res) => {
     try {
         const _id = req.params.id;
         const notesData = await Notes.findById(_id);
@@ -18,4 +18,4 @@ app.get('/:id', async(req, res) => {
     }
 });
 
-module.exports = app;
+module.exports = router;
