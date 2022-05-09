@@ -2,30 +2,29 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
-import { RouterModule } from "@angular/router";
 
-// Modules
-import { SharedModule } from "../shared/shared.module";
+// Component
+import { HeaderComponent } from "./components/header/header.component";
 
-// Components
-import { NotesListComponent } from "./components/notes-list/notes-list.component";
+// Material Modules
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
     declarations: [
-        NotesListComponent
+        HeaderComponent
     ],
     imports: [
         CommonModule,
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
-        RouterModule,
-        SharedModule
+        MatIconModule,
+        MatMenuModule
     ],
     exports: [
-        NotesListComponent
-    ],
-    providers: []
+        HeaderComponent
+    ]
 })
 
-export class TemplatesModule { }
+export class SharedModule { }
